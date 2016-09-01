@@ -1,0 +1,18 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => '.navbar-collapse', "data-toggle" => 'collapse', :type => 'button'}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    .navbar-collapse.collapse.navbar-right.scroll-me
+      %ul.nav.navbar-nav
+        %li.username
+          %a{:href => "#"}
+            .pull-left
+            .pull-right
+              %span
+                =  "#{current_user.first_name}".capitalize + " "+"#{current_user.last_name}".capitalize
+        %li
+          - if user_signed_in?
+            = link_to "Logout", destroy_user_session_path, method: :delete

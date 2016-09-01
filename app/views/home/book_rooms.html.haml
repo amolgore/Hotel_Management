@@ -1,0 +1,24 @@
+%head
+= render 'layouts/dashboard_header'
+%br
+%br
+%h3.align-heading
+  Book your Room
+.container.form-label
+  .form-control-static
+    = form_tag search_available_rooms_path, method: 'get', remote: true do
+      .col-md-12.col-lg-12
+        .col-md-3.col-lg-3
+          %label Start Date
+        .col-md-3.col-lg-3
+          %label End Date
+        .col-md-6.col-lg-6
+          %label Room Type
+      = date_field_tag(:start_date, Date.today, class: 'datepicker')
+      = date_field_tag(:end_date, Date.today, class: 'datepicker')
+      = select_tag(:room_type, options_for_select(@room_category.map{ |c| [c.category + '(' + c.price.to_s + ' RS' + ')', c.id ]}))
+      = submit_tag('Search Rooms',class:'search-button')
+    #booking-page
+
+
+

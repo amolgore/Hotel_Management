@@ -1,0 +1,6 @@
+mailer:
+  user_name: 'goreamol22@gmail.com'
+  password: ''
+  domain: 'gmail.com'
+  address: 'smtp.gmail.com'
+  port: '465'

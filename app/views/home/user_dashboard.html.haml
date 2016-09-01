@@ -1,0 +1,25 @@
+%head
+= render 'layouts/dashboard_header'
+%br
+%br
+%h1
+  WELCOME #{current_user.first_name.capitalize}  #{current_user.last_name.capitalize}
+.book-room-link
+  = link_to 'Book Room',book_rooms_path
+.panel.col-md-6.col-lg-6
+  %h3.text-center  Booking Statuses
+  .user-booked-rooms-status
+    .table-responsive
+      %table.table{:style => "margin-bottom: 0px;"}
+        %thead
+          %tr
+            %th Room Number
+            %th Room Type
+        %tbody
+          - @room_id.each do |room_id|
+            - room = Room.find_by_id(room_id)
+            %tr
+              %td
+                = room.number
+              %td
+                = room.room_category.category

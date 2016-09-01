@@ -1,0 +1,43 @@
+
+// Added the style sheet classes for
+// user Dashboard
+.form-control-static {
+  height:462px;
+}
+.room-status {
+  padding: 17%;
+  text-align: center;
+}
+.datepicker {
+  width:22%;
+}
+
+.form-label {
+  margin-top: 3%;
+  float: left;
+}
+.align-heading {
+  text-align: center;
+}
+// Set color of search button and height
+.search-button {
+  background-color: rgba(38, 122, 156, 1);
+  border: none;
+  color: white;
+  height:23px;
+}
+
+// Set the background color of book button
+
+.book-button {
+  background-color: rgba(38, 122, 156, 1);
+  border: none;
+  color: white;
+}
+
+// Set the font size for book room link
+
+.book-room-link {
+  text-align: center;
+  font-size: 53px;
+}
