@@ -1,28 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
 
 * Ruby version
-
+  - ruby 2.3.1
+  - rails 4.2.5
 * System dependencies
+  - Insall Ruby
+  - Install Rails
 
 * Configuration
+  - Install gems using command bundle install
+  - Update username and password for mysql2 in database.yml file
 
 * Database creation
+  - Create database using command rake db:create
 
 * Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+  - Run migrations using command rake db:migrate
+  - Import schema file to populate the database.
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  - Compile assets using command rake assets:precompile
+  - Start rails server using command rails s
